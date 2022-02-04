@@ -30,3 +30,13 @@ RUA['Side'] = np.where(RUA['MA10'] > RUA['MA200'], 1, -1)
 # drop values for first 200 days since no MA200
 SPX.dropna(inplace=True)
 RUA.dropna(inplace=True)
+
+# backtest for long when Side is 1, cash when -1
+# enter and exit on the Open
+capital = 100000
+SPX['Cash'] = capital
+for i, r in SPX.iterrows():
+    if r['Side'] == 1:
+        capital += capital * r['Return']
+        SPX['Cash'].loc[i] = capital
+capital
