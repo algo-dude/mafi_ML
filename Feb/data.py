@@ -40,3 +40,18 @@ for i, r in SPX.iterrows():
         capital += capital * r['Return']
         SPX['Cash'].loc[i] = capital
 capital
+
+
+from hmmlearn.hmm import GaussianHMM
+
+##### HMM state 0 is bullish, 1 is bearish #####
+
+rets = np.column_stack([SPX["Return"]])
+hmm_model = GaussianHMM(n_components=2, covariance_type="full", n_iter=10000).fit(rets)
+hidden_states = hmm_model.predict(rets)
+SPX['HMM_state'] = hidden_states
+
+rets = np.column_stack([RUA["Return"]])
+hmm_model = GaussianHMM(n_components=2, covariance_type="full", n_iter=10000).fit(rets)
+hidden_states = hmm_model.predict(rets)
+RUA['HMM_state'] = hidden_states
