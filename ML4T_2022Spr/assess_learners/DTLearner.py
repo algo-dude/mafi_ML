@@ -20,7 +20,7 @@ class DTLearner(object):
         all_data=np.append(dataX,new_dataY,axis=1)
         self.tree=self.build_tree(all_data)
 
-    def build_tree(self,data):
+    def build_tree(self,data):      # recursive function to build tree
         if data.shape[0]<=self.leaf_size:	# If number of nodes left < leaf-size, all are leaf nodes, return mean
             return np.array([["Leaf",np.mean(data[:,-1]),-1,-1]])
 
@@ -50,13 +50,13 @@ class DTLearner(object):
         dataX=data.shape[1]-1	#extract dataX
         dataY=data[:,data.shape[1]-1]	#extract dataY
 
-        temp=[]
+        temp=[]                                                     # list to search later
         for feature in range(0,dataX):
             correlation_val = np.corrcoef(data[:,feature],dataY)
-            correlation_val = abs(correlation_val[0,1])
+            correlation_val = abs(correlation_val[0,1])             # correct for negative
             temp.append(correlation_val)
             
-        for i in range(0,len(temp)):
+        for i in range(0,len(temp)):                                # loop to find best feature
             if temp[i]>Max_val:
                 Max_val = temp[i]
                 best_feature = i
