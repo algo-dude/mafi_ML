@@ -238,7 +238,7 @@ def test_code():
     verbose = True  # print lots of debug stuff if True  		  	   		   	 			  		 			     			  	  		 	  	 		 			  		  			
   		  	   		   	 			  		 			     			  	  		 	  	 		 			  		  			
     # read in the map  		  	   		   	 			  		 			     			  	  		 	  	 		 			  		  			
-    filename = "testworlds/world05.csv"  		  	   		   	 			  		 			     			  	  		 	  	 		 			  		  			
+    filename = "testworlds/world04.csv"  		  	   		   	 			  		 			     			  	  		 	  	 		 			  		  			
     inf = open(filename)  		  	   		   	 			  		 			     			  	  		 	  	 		 			  		  			
     data = np.array(  		  	   		   	 			  		 			     			  	  		 	  	 		 			  		  			
         [list(map(float, s.strip().split(","))) for s in inf.readlines()]  		  	   		   	 			  		 			     			  	  		 	  	 		 			  		  			
