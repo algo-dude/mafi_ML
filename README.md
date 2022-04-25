@@ -23,7 +23,7 @@ https://lucylabs.gatech.edu/ml4t/
   * ![](/images/notes1.jpg)
 * Technical analysis typically provides more value the shorter the time horizon gets.  A perfect example of this is the differences between Renaissance Technologies and Warren Buffet, whom, in the real world, have similar performance.
   * ![](/images/notes1.jpg)
-
+  * Full notes are [here](https://github.com/algo-dude/mafi_ML/blob/main/March/GATECH-CS7646-ML4T.pdf)
 * With the addition of more market participants, old techniques do not work.  Larry Connors’s “RSI(2)” trading system no longer works, but was once heralded as a magic pill for TA traders.
   * https://www.qmatix.com/ConnorsRSI-Pullbacks-Guidebook.pdf
 * TA indicators, such as the RSI, are typically weak today when used on its own.  Combinations of these indicators are much stronger, but still work better for shorter periods.
@@ -115,8 +115,8 @@ https://lucylabs.gatech.edu/ml4t/
 
 3) March
 
-  * CS7646 lectures were completed.  See file: /March/GATECH-CS7646-ML4T.pdf
-  * Lots and lots of Python practice.
+  * CS7646 lectures were completed.  See file: [here](https://github.com/algo-dude/mafi_ML/blob/main/March/GATECH-CS7646-ML4T.pdf)
+  * Lots and lots, and LOTS, of Python practice.
 
 4) April
 
