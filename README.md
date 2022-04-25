@@ -135,6 +135,7 @@ https://lucylabs.gatech.edu/ml4t/
 ## Notes:
 
 * I have coded a fully working API-free data scraper for Binance to pull futures or spot data at a requested time interval for all markets.  As previously noted, data ingeestion is different in nearly all of these projects.  I am at least able to take this CSV data and import it to RealTest where I can do portfolio level analysis, though.  
+  * This is available here: https://github.com/algo-dude/BinanceData
 
 * The GA Tech course was absolutely a computer science course with some financial concepts included.  I had some trouble following along and suspect that had I started it in January when my independent study began that I would have had a simpler time with setting up the environment the way they recommended, instead of rushing through it.  
 
