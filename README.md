@@ -50,12 +50,56 @@ https://lucylabs.gatech.edu/ml4t/
     *	Computing S (determine the current market state)
     *	Selecting A via consulting Q: Q represents the value of taking action A in state S
     *	Observing the experience (result) and the modified state after action A was taken
-      *	*This involves actually trading in the market, which can be extremely expensive*
-      *	*This can also be done in a backtesting environment, but would still need to happen in the live market in order to run the model as the backtest has ran it*
+      *	*Note: This involves actually trading in the market, which can be extremely expensive*
+      *	*Note: This can also be done in a backtesting environment, but would still need to happen in the live market in order to run the model as the backtest has ran it*
     *	Updating Q
   *	The success of Q-Learning depends on the exploration of actions, since at the end of one training loop the Q table is updated with the result.  Results should be weighted, giving more weight to recent rewards and less weight as time passes.
   *	**Determining S can be done via a massive array of inputs that I will elaborate on further, with some hypotheticals.**
 
+#### Dyna-Q  
+
+* Dyna-Q is a way to speed up Q-Leaning by “hallucinating experiences” between real events.  It is quite clever. 
+  * After every iteration of Q-Learning, training Dyna-Q involves:
+    *	Choosing a random state S and action A
+    *	Inferring the result of the hallucinated state and action
+    *	Updating Q
+    *	Repeating 100x/200x between each iteration of standard Q-Learning
+  *	This act of inference is commonly weighted less than actual market interaction.  
+    * The value placed on this inference must be discounted in some way to differentiate it from the actual market, because it may or may not be “true”.
+*	Dyna-Q is computationally expensive, but not monetarily.  If this is being deployed in continuous time (live), then it can be extremely costly.
+
+## Market State
+
+*	Ultimately, the State prediction, S, is where models win or lose when deployed.
+*	Many other ML models use a state variable.
+  *	S can be categorized by Close/MA, BB value, P/E ratio, simulation current holdings, return since entry, or many other simple numerical observations based on price or fundamental data.
+    *	*Double dipping would include using other ML algorithms such as NLP or sentiment analysis to infer some additional information about the market that can then be discretized as some numerical value.*
+    * **I suspect this is where the largest amount of edge is for any trading system which incorporates a ML based agent.**
+
+## Portfolio Management
+
+* •	Most of the public knowledge of active machine learning techniques being applied to the market are in regards to portfolio management and/or rebalancing.  
+  *	This will typically be done with some kind of “uncertainty” variable that is associated with the estimated State.  Higher uncertainty can, for instance, lead to a smaller position size.
+*	Sharpe, unsurprisingly, seems to be the most common risk reward measurement.
+
+## Takeaways from varios papers
+
+*	Multiple markets are not typically used – likely this is because it is out of the research scope when a project begins.  This makes me quite hesitant on usability of results unless there is a significant economic explainable reason behind it.  If someone argued “cryptocurrency ML trading systems won’t work on fixed income products because they are far less volatile and move much slower”, I would agree with said statement, but if something works in the FX markets, I would also want to see it on equity indexes, for example.
+*	There is no consistency among the environments.  Some model with transaction costs and market friction, some ignore it.  Some allow short selling, others ignore it.
+*	Everyone is using different datasets, so it is hard to compare between multiple papers.
+*	**VERY FEW papers and projects have code available online.  Almost all of it is proprietary.  I can’t fault them for this.**
+
+## Papers, but not inclusive
+
+1.	Rundo, F. Deep LSTM with reinforcement learning layer for financial trend prediction in FX high frequency trading systems.  Appl. Sci. 2019, 9, 4460.
+2.	Huotari, T.; Savolainen, J.; Collan, M. Deep reinforcement learning agent for S&P 500 stock selection. Axioms 2020, 9, 130.
+3.	Tsantekidis, A.; Passalis, N.; Tefas, A. Diversity-driven knowledge distillation for financial trading using Deep Reinforcement Learning. Neural Netw. 2021, 140, 193–202.
+4.	Wu, M.E.; Syu, J.H.; Lin, J.C.W.; Ho, J.M. Portfolio management system in equity market neutral using reinforcement learning.  Appl. Intell. 2021, 51, 8119–8131
+5.	Millea, A. Deep Reinforcement Learning for Trading—A Critical Survey. Data 2021, 6, 119. 
+6.	He, X.; Zhao, K.; Chu, X. AutoML: A Survey of the State-of-the-Art. Knowl.-Based Syst. 2021, 212, 106622.
+7.	Jiang, Z.; Xu, D.; Liang, J. A deep reinforcement learning framework for the financial portfolio management problem. arXiv 2017, arXiv:1706.10059.
+8.	Lucarelli, G.; Borrotti, M. A deep Q-learning portfolio management framework for the cryptocurrency market. Neural Comput. Appl. 2020, 32, 17229–17244.
+9.	Mosavi, A.; Faghan, Y.; Ghamisi, P.; Duan, P.; Ardabili, S.F.; Salwana, E.; Band, S.S. Comprehensive review of deep reinforcement learning methods and applications in economics. Mathematics 2020, 8, 1640.
 
 
 ## Show your support
