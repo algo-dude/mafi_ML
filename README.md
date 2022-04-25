@@ -78,7 +78,7 @@ https://lucylabs.gatech.edu/ml4t/
 
 ## Portfolio Management
 
-* •	Most of the public knowledge of active machine learning techniques being applied to the market are in regards to portfolio management and/or rebalancing.  
+* Most of the public knowledge of active machine learning techniques being applied to the market are in regards to portfolio management and/or rebalancing.  
   *	This will typically be done with some kind of “uncertainty” variable that is associated with the estimated State.  Higher uncertainty can, for instance, lead to a smaller position size.
 *	Sharpe, unsurprisingly, seems to be the most common risk reward measurement.
 
