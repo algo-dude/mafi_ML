@@ -28,6 +28,7 @@ https://lucylabs.gatech.edu/ml4t/
   * https://www.qmatix.com/ConnorsRSI-Pullbacks-Guidebook.pdf
 * TA indicators, such as the RSI, are typically weak today when used on its own.  Combinations of these indicators are much stronger, but still work better for shorter periods.
 * The ease of use of any machine learning based system is inversely proportional to the extractable value, particularly when taking into account data ingestion.
+* GitHub was not required for this course, but I am extremely happy that I have learned how to use it to manage my workflow between multiple computers and projects, and I can see the massive value in it for working with a team.
 
 ## The Financial Markets as a Reinforcement Learning Environment  
 
