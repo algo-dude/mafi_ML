@@ -121,7 +121,7 @@ https://lucylabs.gatech.edu/ml4t/
 4) April
 
   * A Q-learning robot that navigates a "maze":
-      * ![](/images/qlearning_robot.mp4)
+      * ![](/images/qlearning_robot.mov)
     
 
 
