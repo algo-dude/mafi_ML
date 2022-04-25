@@ -121,7 +121,10 @@ https://lucylabs.gatech.edu/ml4t/
 4) April
 
   * A Q-learning robot that navigates a "maze":
-      * ![](/images/qlearning_robot.mov)
+      * ![](/images/qlearning_robot.gif)
+  * Coding indicators without a TA library
+      * ![](/images/Indicator2_BB.png)
+  * Comparing a theoretically optiomal strategy
     
 
 
