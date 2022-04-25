@@ -11,7 +11,7 @@
 
 👤 **Seth Lingafeldt**
 
-* Twitter: [@algo\_seth](https://twitter.com/algo\_seth)
+* Twitter: [@algo\_seth](https://twitter.com/algo_seth)
 * Github: [@algo-dude](https://github.com/algo-dude)
 * LinkedIn: [@sethlingafeldt](https://linkedin.com/in/sethlingafeldt)
 
