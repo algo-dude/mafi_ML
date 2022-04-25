@@ -101,6 +101,30 @@ https://lucylabs.gatech.edu/ml4t/
 8.	Lucarelli, G.; Borrotti, M. A deep Q-learning portfolio management framework for the cryptocurrency market. Neural Comput. Appl. 2020, 32, 17229–17244.
 9.	Mosavi, A.; Faghan, Y.; Ghamisi, P.; Duan, P.; Ardabili, S.F.; Salwana, E.; Band, S.S. Comprehensive review of deep reinforcement learning methods and applications in economics. Mathematics 2020, 8, 1640.
 
+## CS7646 monthly folders:
+
+1) Jan
+
+  * Most of January was spent discovering that there was no good equity portfolio backtesting framework in the public domain written in python.  I still use RealTest for my equity research.
+
+2) Feb
+
+  * I  spent time working on the IAQF project where we implremented a HMM hidden state model to predict the market state.  It did fairly well.  Date on X axis is not included, but you can see the GFC in 2008 is where the states diverge.  We saw little value in the three state model, so we took two states to the production code  See image:
+  * ![](/images/hmm.png)
+  * In February I started the CS7646 course and began taking notes and working through some of the material.  I did not upload the practice code for some simpler ML learnign algorithms such as bag learner.
+
+3) March
+
+  * CS7646 lectures were completed.  See file: /March/GATECH-CS7646-ML4T.pdf
+  * Lots and lots of Python practice.
+
+4) April
+
+  * A Q-learning robot that navigates a "maze":
+      * ![](/images/qlearning_robot.mp4)
+    
+
+
 
 ## Show your support
 
