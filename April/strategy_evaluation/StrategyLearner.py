@@ -49,7 +49,7 @@ class StrategyLearner(object):
         print("aladdha7")
 
 
-    def add_evidence(self, symbol="IBM", sd=dt.datetime(2008, 1, 1), ed=dt.datetime(2009, 1, 1), sv=10000):
+    def add_evidence(self, symbol="BTC_USDT", sd=dt.datetime(2008, 1, 1), ed=dt.datetime(2009, 1, 1), sv=10000):
 
         moving_window = 21
 

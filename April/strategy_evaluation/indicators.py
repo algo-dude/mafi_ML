@@ -51,13 +51,11 @@ def getVolatility(prices, moving_window):
     volatility = daily_returns.rolling(window=moving_window).std()
     return volatility
 
-# Indicator 5  - MACD
-def getMACD(prices):
-    ema_short = prices.ewm(span=12, adjust=False).mean()
-    ema_long = prices.ewm(span=26, adjust=False).mean()
-    MACD = ema_long - ema_short
-    signal = MACD.ewm(span=9, adjust=False).mean()
-    return MACD, signal
+# Indicator 5  - ATR
+# def getATR(prices):
+#     MACD = ema_long - ema_short
+#     signal = MACD.ewm(span=9, adjust=False).mean()
+#     return MACD, signal
 
 def test_code_indicators(symbol = "JPM", sd = dt.datetime(2008, 1, 1), ed = dt.datetime(2009, 12, 31)):
 
@@ -125,12 +123,12 @@ def test_code_indicators(symbol = "JPM", sd = dt.datetime(2008, 1, 1), ed = dt.d
     fig.savefig('Indicator4_Volatility.png')
     plt.close()
 
-    # Indicator 5 - plotting MACD
-    MACD, signal = getMACD(prices)
-    fig, ax = plt.subplots(figsize=(15, 7))
-    ax.set(xlabel='Time', ylabel="Price", title="MACD")
-    ax.plot(MACD, "gray", label='MACD')
-    ax.plot(signal, "coral", label="MACD Signal")
-    ax.legend()
-    fig.savefig('Indicator5_MACD.png')
-    plt.close()
+    # # Indicator 5 - plotting MACD
+    # ATR, signal = getATR(prices)
+    # fig, ax = plt.subplots(figsize=(15, 7))
+    # ax.set(xlabel='Time', ylabel="Price", title="ATR")
+    # ax.plot(ATR, "gray", label='ATR')
+    # ax.plot(signal, "coral", label="ATR")
+    # ax.legend()
+    # fig.savefig('Indicator5_ATR.png')
+    # plt.close()
