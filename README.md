@@ -19,11 +19,10 @@
 
 *	GA Tech’s CS7646 ML4T course had amazing YouTube lectures and tons of content that I will keep in my work related notebook.  My handwritten notes are in the PDF file on my GitHub.
 https://lucylabs.gatech.edu/ml4t/
-* They use stock data from 2000 – 2012.  In my experience, this can only be used to teach basic concepts and holds little value for system development, particularly with ML-based systems.  See below:
-* I’m pasting in my notes here on technical analysis because I loved the material and how it was delivered.
-![](/images/notes1.png)
+* They use stock data from 2000 – 2012.  In my experience, this can only be used to teach basic concepts and holds little value for system development, particularly with ML-based systems.  I’m pasting in my notes here on technical analysis because I loved the material and how it was delivered. See below:
+  * ![](/images/notes1.jpg)
 * Technical analysis typically provides more value the shorter the time horizon gets.  A perfect example of this is the differences between Renaissance Technologies and Warren Buffet, whom, in the real world, have similar performance.
-![](/images/notes1.png)
+  * ![](/images/notes1.jpg)
 
 * With the addition of more market participants, old techniques do not work.  Larry Connors’s “RSI(2)” trading system no longer works, but was once heralded as a magic pill for TA traders.
   * https://www.qmatix.com/ConnorsRSI-Pullbacks-Guidebook.pdf
